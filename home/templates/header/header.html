@@ -1,0 +1,17 @@
+{% block contents %}
+    {% load staticfiles %}
+    <div id="nav-wrapper" >
+        <div class="wrapper">
+            <nav>
+              <a href = "/" class = "logo"><img src = '{% static "header/tupperwarebrands_logo.jpg" %}' height="35%" width="35%"></a>
+              <a href="/" class="home">Home</a>
+              <a href="/aboutus" class="aboutus">About Us</a>
+              <a href="/products/category/kids" class="products">Products</a>
+              <a href="/opportunity" class="oppotunities">Opportunities</a>
+              <a href="/account" class="account">Account</a>
+              <a href="/cart" class="shopping">Cart</a>
+            </nav>
+        </div>
+    </div>
+<br><br><br>
+{% endblock %}

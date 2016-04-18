@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TupperWare</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home-init.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+    <link rel="script" type = "text/javascript" href="{% static 'home/jquery.min.js' %}"/>
+
+
+    <!--script>
+        $(function(){
+		$('.fadein img:gt(0)').hide();
+		setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 3000);
+		});
+    </script-->
+</head>
+<body>
+{% include 'header/header.html' %}
+
+<div class="slider">
+	<figure>
+		<img src="{% static 'home/1.png' %}" alt="">
+		<img src="{% static 'home/2.png' %}" alt="">
+		<img src="{% static 'home/3.png' %}" alt="">
+		<img src="{% static 'home/4.png' %}" alt="">
+		<img src="{% static 'home/5.png' %}" alt="">
+	</figure>
+	</div>
+
+	<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center" class="hr">
+ 		 <span style="font-size: 40px; font-family:sans-serif; background-color: #ffffff; padding: 0 10px;">
+    		SALE
+  		</span>
+	</div>
+
+	<div class="products">
+			<div class="imgWrap1">
+  				<img src="{% static 'home/6.JPG' %}" height=360px width=610px alt="polaroid" />
+  				<p class="imgDescription1">BUY NOW >></p>
+  			</div>
+  			<div class="imgWrap2">
+  				<img src="{% static 'home/7.JPG' %}" height=360px width=610px alt="polaroid" />
+  				<p class="imgDescription2">BUY NOW >></p>
+  			</div>
+  			<div class="imgWrap3">
+  				<img src="{% static 'home/9.JPG' %}" height=360px width=610px alt="polaroid" />
+  				<p class="imgDescription3">BUY NOW >></p>
+  			</div>
+  			<div class="imgWrap4">
+  				<img src="{% static 'home/10.JPG' %}" height=360px width=610px alt="polaroid" />
+  				<p class="imgDescription4">BUY NOW >></p>
+  			</div>
+	</div>
+	<div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center" class="hr2">
+ 		 <span style="font-size: 40px; font-family:sans-serif; background-color: #ffffff; padding: 0 10px;">
+    		FEATURED BRANDS
+  		</span>
+	</div>
+
+	<div class="fb">
+			<img style="position:absolute; top:1680px; left:30px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:160px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:290px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:420px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:550px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:680px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:810px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:940px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:1070px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+			<img style="position:absolute; top:1680px; left:1200px;" src="{% static 'home/8.JPG' %}" height=12% width=8%>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    {% load staticfiles %}
+     <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+     <link rel="stylesheet" type="text/css" href="{% static 'opportunity/opportunity.css' %}"/>
+</head>
+<body>
+{% include 'header/header.html' %}
+{#    <div id="opportunity">#}
+{#		<dl>#}
+{#            <dt>Opportunity</dt>#}
+{#            {% for oppo in object_list %}#}
+{#                <a href="#" id = "oppo_boj"><dd>{{ oppo.opportunity_title }}</dd></a>#}
+{#            {% endfor %}#}
+{#		</dl>#}
+{#		<dl>#}
+{#			<dt>Career</dt>#}
+{#			{% for car in career_list %}#}
+{#                <a href="#" id = "car_boj"><dd>{{ car.career_title }}</dd></a>#}
+{#            {% endfor %}#}
+{#		</dl>#}
+{#	</div>#}
+    <div align="center">
+
+        {% for oppor in object_list %}
+            <div>
+                {% if oppor.opportunity_image %}
+                    <img src="{{ oppor.opportunity_image.url }}" width="1200px" height="500px" class="opportunity_story"/><br>
+                {% endif %}
+
+                <div id="title">
+                    <h1>{{ oppor.opportunity_title }}</h1><br>
+                </div>
+
+                <div id="description">
+                    {{ oppor.opportunity_story }}<br>
+                </div>
+
+                <div id="date">
+                    {{ oppor.opportunity_date }}<br><br>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{#	<div>#}
+{#		<img src="universe.jpg" width="250" height="250" class="product1">#}
+{#	</div>#}
+{#	<div id="description">#}
+{#		<h1>Opportunity Title</h1>#}
+{#		<font face="times new roman"size="4">#}
+{##}
+{#	</font>#}
+{#	</div>#}
+{##}
+{#	<div>#}
+{#		<img src="universe.jpg" width="250" height="250" class="product2">#}
+{#	</div>#}
+{##}
+{##}
+{#	<div id="description2">#}
+{#		<h1>Opportunity Title</h1>#}
+{#		<font face="times newroman"size="4">#}
+{#		lorem ipsum dolor sit imet consectetur adipisicing elite sed do ciusmed tempor<br>#}
+{#		incidedunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis t<br>#}
+{#		amet, consectetur, adipisci velit, sed quia non numquam cius modi tempora<br>#}
+{#		incidunt ut labore et dolore magnam aliquam quacrat volaptatem.<br>#}
+{#		lorem ipsum dolor sit imet consectetur adipisicing elite sed do ciusmed tempor<br>#}
+{#		incidedunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis t<br>#}
+{#		amet, consectetur, adipisci velit, sed quia non numquam cius modi tempora<br>#}
+{#		incidunt ut labore et dolore magnam aliquam quacrat volaptatem.#}
+{#	</font>#}
+{#	</div>#}
+{##}
+{#	<div>#}
+{#		<img src="universe.jpg" width="250" height="250" class="product3">#}
+{#	</div>#}
+{##}
+{#	<div id="description3">#}
+{#		<h1>Opportunity Title</h1>#}
+{#		<font face="times newroman"size="4">#}
+{#		lorem ipsum dolor sit imet consectetur adipisicing elite sed do ciusmed tempor<br>#}
+{#		incidedunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis t<br>#}
+{#		amet, consectetur, adipisci velit, sed quia non numquam cius modi tempora<br>#}
+{#		incidunt ut labore et dolore magnam aliquam quacrat volaptatem.<br>#}
+{#		lorem ipsum dolor sit imet consectetur adipisicing elite sed do ciusmed tempor<br>#}
+{#		incidedunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis t<br>#}
+{#		amet, consectetur, adipisci velit, sed quia non numquam cius modi tempora<br>#}
+{#		incidunt ut labore et dolore magnam aliquam quacrat volaptatem.#}
+{#	</font>#}
+{#<br><br><br><br><br><br><br><br><br><br><br><br><br><br>#}
+{#	</div>#}
+
+
+        <div id="footer-wrapper" >
+        <div class="footer">
+            <nav>
+            <a href="#" class="legalinfo">Legal Info</a>
+            <a href="#" class="faq">FAQ</a>
+            <a href="#" class="sitemap">Site Map</a>
+            <a href="#" class="branchinfo">Branch Info</a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

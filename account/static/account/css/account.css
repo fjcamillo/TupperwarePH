@@ -1,0 +1,9 @@
+body{
+    background: url(2.jpg) #ffffff repeat left top;
+    background-size:100%; 
+    }
+
+#up {
+    margin-left:400px;
+    margin-top:100px;
+}

@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tupperware Products</title>
+<style>
+		main {
+		margin-bottom: 200%;
+		}
+		
+		.floating-menu {
+		font-family: sans-serif;
+		background: #2C90D7;
+		padding: 5px;;
+		width: 200px;
+		z-index: 100;
+		position: fixed;
+		top: 200px;
+		left: 100px;
+		}
+		
+		.floating-menu a, 
+		.floating-menu h3 {
+		font-size: 0.9em;
+		display: block;
+		margin: 0 0.5em;
+		color: white;
+		}
+
+	.nav ul {
+		list-style: none; 
+		background-color: #2C90D7;
+		text-align: center; 
+		padding: 0; 
+		margin: 0;
+	}
+		
+	.nav li { 
+		font-family: 'Oswald', sans-serif;  font-size: 1.2em;
+		line-height: 40px;  height: 40px;  
+		border-bottom: 1px solid #888;
+	}
+	
+	.nav a {
+	color: #000; /* #fff */
+	display: block;
+	transition: .3s background-color;
+	text-decoration: none;
+	} 
+	
+	.nav a:hover {
+	background-color: #B595AD;
+	} 
+	
+	.nav a.active {
+	background-color: #D72C90;
+	color: #B595AD;
+	cursor: default;
+	} 
+	
+	@media screen and (min-width: 600px){
+	
+	.nav li {
+	width: 200px;
+	border-bottom: none;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	}   
+	
+	/* Option 1 - Display Inline */  
+	
+	.nav li {    
+		display: inline-block;    
+		margin-right: -4px;  
+	}   
+	
+	}
+	
+	/* Main */
+	
+	#menu {
+		width: 100%;
+		margin: 0;
+		padding: 0px 0 0 0;
+		list-style: none;  
+		border-radius: 0px;
+		box-shadow: 0 3px 1px #9c9c9c;
+	}
+
+	#menu li {
+		float: center;
+		padding: 0 0 0px 0;
+		position: relative;
+	}
+
+
+	#menu li:hover > a {
+	color: #000;
+	}
+
+	*html #menu li a:hover { /* IE6 */
+		color: #fafafa;
+	}
+
+	#menu li:hover > ul {
+		display: block;
+	}
+
+	/* Sub-menu */
+	
+	#menu ul {
+    list-style: none;
+		margin: 0;
+		padding: 0;    
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 100px;
+		z-index: 99999;    
+		background-color: #444;   
+		background-image: linear-gradient(#444, #111);
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	#menu ul li {
+		float: none;
+		margin: 2px;
+		padding: 0;
+		display: block;  
+		box-shadow: 0 1px 0 #111111, 
+					0 2px 0 #777777;
+	}
+
+	#menu ul li:last-child { 
+		box-shadow: none;    
+	}
+
+	#menu ul a {
+	height: 30px;
+	line-height: 35px;
+	display: block;
+	white-space: nowrap;
+	float: none;
+	text-transform: none;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	}
+
+	*html #menu ul a { /* IE6 */   
+		height: 10px;
+		width: 150px;
+	}
+
+	*:first-child+html #menu ul a { /* IE7 */    
+		height: 10px;
+		width: 150px;
+	}
+
+	#menu ul a:hover {
+	background-color: #C0BDC4;
+	background-image: linear-gradient(#04acec, #0186ba);
+	}
+
+	#menu ul li:first-child a {
+		border-radius: 5px 5px 0 0;
+	}
+
+	#menu ul li:first-child a:after {
+		content: '';
+		position: absolute;
+		left: 50px;
+		top: -8px;
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-bottom: 8px solid #444;
+	}
+
+	#menu ul li:first-child a:hover:after {
+		border-bottom-color: #04acec; 
+	}
+
+	#menu ul li:last-child a {
+	border-radius: 0 0 5px 5px;
+	}
+
+	/* Clear floated elements */
+	#menu:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	* html #menu             { zoom: 1; } /* IE6 */
+	*:first-child+html #menu { zoom: 1; } /* IE7 */
+</style>
+</head>
+
+<body>
+<table width="265" border="0" align="center">
+  <tr>
+    <td width="62" align="center"><a href="Womens_Deo1.html">Previous</a></td>
+    <td width="38" align="center"><a href="Womens_Deo1.html">1</a></td>
+    <td width="38" align="center"><a href="Womens_Deo2.html"><strong>2</strong></a></td>
+    <td width="38" align="center"><a href="Womens_Deo3.html">3</a></td>
+    <td width="67" align="center"><a href="Womens_Deo3.html">Next</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="973" border="0" align="center">
+  <tr>
+    <td width="166" rowspan="4" align="center">
+    	<nav class="floating-menu">
+<h3>Cathegories</h3>
+
+<div class="nav">      
+				<ul id="menu">        
+					<li class="mens">
+						<a href="../../Mens.html">Mens</a>
+                        	<ul>
+								<li><a href="../../Mens/Subs/Mens_Body1.html">Body Spray</a></li>
+								<li><a href="../../Mens/Subs/Mens_Deo1.html">Deodorant</a></li>
+							</ul>
+					</li>       
+					
+				  <li class="womens">
+						<a class="active" href="Womens.html">Womens</a>
+							 <ul>
+								<li><a href="Womens_Deo1.html">Deodorant</a></li>
+								<li><a href="Womens_Fragrance1.html">Fragrance</a></li>
+								<li><a href="Womens_Lotion1.html">Lotion</a></li>
+							</ul>
+					</li>       
+					
+				  <li class="kids">
+						<a href="../../Kids.html">Kids</a>
+					</li>       
+
+				  <li class="tupperware">
+						<a href="../../Tupperware.html">Tupperwares</a>
+					</li>        
+					
+				  <li class="deals">
+						<a href="../../Deals.html">Best Deals</a>
+					</li>      
+				</ul>   
+			</div>
+
+</nav>
+    </td>
+    <td width="263" height="249"><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td> <img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center" valign="middle">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+    <td width="263"><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+    <td width="263"><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="248"><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="226"><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+        </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td width="66">&nbsp;</td>
+        <td width="114" align="center">Product Name</td>
+        <td width="66">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><img src="Product.jpg" width="113" height="150"  alt=""/></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><img src="files/det.png" width="66" height="20"  alt=""/></td>
+        <td align="center">&nbsp;</td>
+        <td><img src="files/Add.png" width="66" height="20"  alt=""/></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="265" border="0" align="center">
+  <tr>
+    <td width="62" align="center"><a href="Womens_Deo1.html">Previous</a></td>
+    <td width="38" align="center"><a href="Womens_Deo1.html">1</a></td>
+    <td width="38" align="center"><a href="Womens_Deo2.html"><strong>2</strong></a></td>
+    <td width="38" align="center"><a href="Womens_Deo3.html">3</a></td>
+    <td width="67" align="center"><a href="Womens_Deo3.html">Next</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

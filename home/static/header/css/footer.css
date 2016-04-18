@@ -1,0 +1,44 @@
+
+#footer-wrapper{
+    background-color: rgba(58, 43, 128, 0.9);
+    font-family: "Raleway", "Open Sans", serif;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    vertical-align: middle;
+    padding: 40px;
+    border:2px;
+}
+
+.legalinfo{position: absolute;left: 550px; top:2200px;}
+.faq{position: absolute;left: 750px; top:2200px;}
+.sitemap{position: absolute;left: 900px; top:2200px;}
+.branchinfo{position: absolute;left: 350px; top:2200px;}
+
+#footer-wrapper a {
+    margin: .7em;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#footer-wrapper a:hover {
+    color: #fe2b75;
+    border-bottom: none;
+}
+
+#footer-wrapper a:active{
+    text-decoration: none;
+    color: #fe2b75;;
+}
+
+#footer-wrapper .wrapper {
+    padding: .5em 0;
+}
+
+.footer {
+  overflow: auto; }
+
+#blog a.blog, #home a.home, #call a.call {
+  color: #fe2b75; }

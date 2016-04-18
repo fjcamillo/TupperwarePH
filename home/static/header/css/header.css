@@ -1,0 +1,49 @@
+#nav-wrapper {
+    background-color: rgba(58, 43, 128, 0.9);
+    font-family: "Raleway", "Open Sans", serif;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    padding: 25px;
+    border:2px;
+}
+
+.logo{position: absolute;left:10px; top:5px;}
+.home{position: absolute;left:600px; top:15px;}
+.aboutus{position: absolute;left:690px; top:15px;}
+.products{position: absolute;left:810px; top:15px;}
+.oppotunities{position: absolute;left:930px; top:15px;}
+.account{position: absolute;left:1090px; top:15px;}
+.shopping{position: absolute;left:1200px; top:15px;}
+
+
+
+#nav-wrapper a {
+    margin: .7em;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#nav-wrapper a:hover {
+    color: #fe2b75;
+    border-bottom: none;
+}
+
+#nav-wrapper a:active{
+    text-decoration: none;
+    color: #fe2b75;;
+}
+
+#nav-wrapper .wrapper {
+    padding: .5em 0;
+}
+
+.wrapper {
+  overflow: auto; }
+
+#blog a.blog, #home a.home, #call a.call {
+  color: #fe2b75; }

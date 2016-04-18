@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tupperware Products</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'v4/main/kids.css' %}"/>
+</head>
+
+<body>
+{% include 'header/header.html' %}
+<table width="391" border="0" align="center">
+  <tr>
+    <td width="62" align="center"><a href="/products/category/kids/1">Previous</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/1"><strong>1</strong></a></td>
+    <td width="38" align="center"><a href="/products/category/kids/2">2</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/3">3</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/4">4</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/5">5</a></td>
+    <td width="67" align="center"><a href="/products/category/kids/2">Next</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="973" border="0" align="center">
+  <tr>
+    <td width="166" rowspan="4" align="center">
+    	<nav class="floating-menu">
+<h3>Cathegories</h3>
+
+<div class="nav">      
+				<ul id="menu">        
+					<li class="mens">
+						<a href="/products/category/men">Mens</a>
+                        	<ul>
+								<li><a href="Mens/Subs/Mens_Body1.html">Body Spray</a></li>
+								<li><a href="Mens/Subs/Mens_Deo1.html">Deodorant</a></li>
+							</ul>
+					</li>       
+					
+				  <li class="womens">
+						<a href="/products/category/women">Womens</a>
+							 <ul>
+								<li><a href="Womens/Subs/Womens_Deo1.html">Deodorant</a></li>
+								<li><a href="Womens/Subs/Womens_Fragrance1.html">Fragrance</a></li>
+								<li><a href="Womens/Subs/Womens_Lotion1.html">Lotion</a></li>
+							</ul>
+							
+				  </li>       
+					
+				  <li class="kids">
+						<a class="active" href="/products/category/kids">Kids</a>
+				  </li>       
+
+				  <li class="tupperware">
+						<a href="/products/category/tupperware">Tupperwares</a>
+				  </li>        
+					
+				  <li class="deals">
+						<a href="/products">Best Deals</a>
+				  </li>      
+				</ul>   
+		  </div>
+
+</nav>
+    </td>
+    <td width="263" height="249"><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Blue Baby Bath</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-bath.png' %}" width="198px" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/19"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center" valign="middle">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form1.as_p }}
+                <input type="submit" name="product_one" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+    <td width="263"><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Blue Baby Cologne</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-cologne.png' %}" width="198" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/17"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form2.as_p }}
+                <input type="submit" name="product_two" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+    <td width="263"><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Blue Baby Lotion</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-lotion.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/21"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST"  action="">{% csrf_token %}
+                {{ form3.as_p }}
+                <input type="submit" name="product_three" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="248"><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Blue Baby Powder</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-powder.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/15"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form4.as_p }}
+                <input type="submit" name="product_four" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td height="24" colspan="3" align="center">Baby Care Plus Blue Baby Shampoo</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"> <img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-shampoo.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/18"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form5.as_p }}
+                <input type="submit" name="product_five" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Blue Baby Soap</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-blue-baby-soap.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/12"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form6.as_p }}
+                <input type="submit" name="product_six" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="226"><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Calming Baby Bath</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-calming-calming-baby-bath.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/19"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form7.as_p }}
+                <input type="submit" name="product_seven" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Calming Baby Lotion</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-calming-calming-baby-lotion.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/16"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form8.as_p }}
+                <input type="submit" name="product_eight" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Calming Baby Powder</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-calming-calming-baby-powder.png'%}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/15"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form9.as_p }}
+                <input type="submit" name="product_nine" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Milk Baby Lotion</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-milk-milk-baby-lotion.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/21"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form10.as_p }}
+                <input type="submit" name="product_ten" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+        </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Milk Baby Powder</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-milk-milk-baby-powder.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/15"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form11.as_p }}
+                <input type="submit" name="product_eleven" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+    <td><table width="260" border="0">
+      <tr>
+        <td colspan="3" align="center">Baby Care Plus Milk Baby Soap</td>
+        </tr>
+      <tr>
+        <td colspan="3" align="center"><img src="{% static 'v4/Kids/Pictures/baby-care-plus-milk-milk-baby-soap.png' %}" width="200" height="200"  alt=""/></td>
+        </tr>
+      <tr>
+        <td width="66"><a href="/products/stock/13"><img src="{% static 'v4/files/det.png' %}" width="66" height="20"  alt=""/></a></td>
+        <td width="114" align="center">&nbsp;</td>
+        <td width="66">
+            <form method="POST" action="">{% csrf_token %}
+                {{ form12.as_p }}
+                <input type="submit" name="product_twelve" value="Add to Cart"/>
+{#                <img src="{% static 'v4/files/Add.png' %}" width="66" height="20"  alt=""/>#}
+            </form>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table width="391" border="0" align="center">
+   <tr>
+    <td width="62" align="center"><a href="/products/category/kids/1">Previous</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/1"><strong>1</strong></a></td>
+    <td width="38" align="center"><a href="/products/category/kids/2">2</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/3">3</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/4">4</a></td>
+    <td width="38" align="center"><a href="/products/category/kids/5">5</a></td>
+    <td width="67" align="center"><a href="/products/category/kids/2">Next</a></td>
+  </tr>
+</table>
+</body>
+</html>

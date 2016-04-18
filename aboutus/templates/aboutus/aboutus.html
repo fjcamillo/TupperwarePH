@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'aboutus.css' %}" />
+</head>
+<body>
+{% include 'header/header.html' %}
+<ul class="photo-grid">
+	<li>
+			<figure>
+				<img src=" {% static 'aboutus/5.png' %}" height="456px" width="1026px" alt="first">
+				<figcaption>
+				<p>
+					<h3>
+						Trusted and loved for the last 49 years.
+					</h3>
+				<br>
+				Tupperware was introduced in the Philippines in 1966 and has since become a household name, changing the
+				lives of millions of filipinos through its world-class products and the limitless income opportunities it
+				offers. in 2007, Tupperware Philippines merged with Sara Lee Direct Selling Philippines to become what was
+				known as Fullerlife direct Selling philippines. Today, we are proudly known as tupperware Brands Philippines
+				to reflect our strong heritage while conveying that we are a multi-brand, multi-category
+				direct sales company.
+				</p>
+				</figcaption>
+			</figure>
+	</li>
+	<li>
+			<figure>
+				<img src= "{% static 'aboutus/2.png' %}" height="456px" width="1026px" alt="second">
+				<figcaption>
+				<p>
+					<h3>
+						Better Brands. Better Life.
+					</h3>
+				<br>
+				We have got you covered with world-class products in cosmetics, fragrance; skin care, personal care,
+				baby and kids care intimate apparel and home products. With an array of top brands like Tupperware, Baby
+				Care Plus, colour Collecftion , Ivana, Playtex, Wonderbra and Hanes experience better brands and a better life.
+				</p>
+				</figcaption>
+			</figure>
+	</li>
+	<li>
+			<figure>
+				<img src= "{% static 'aboutus/3.png' %}" height="456px" width="1026px" alt="third">
+				<figcaption>
+				<p>
+					<h3>
+						Live the life that you deserve.
+					</h3>
+				<br>
+				At Tupperware Brands, we care for you and your family. We celebrate your right to choose the life you want
+				to lead. you can work as many hours as you want, earn as much as you want and feel appreciated and valued.
+				No experience necessary! and the good news is that we will give you the training you need to succeed.
+				With success comes incredible awards,and recognition. You can earn cars, international trips, exciting
+				onstage recognition and more. if interested,
+				<a href = "#">click here</a> to learn more.
+				</p>
+				</figcaption>
+			</figure>
+	</li>
+		<li>
+			<figure>
+				<img src= "{% static 'aboutus/4.png' %}" height="456px" width="1026px" alt="fourth">
+				<figcaption>
+				<p>
+					<h3>
+						Changing Lives. Around the world.
+					</h3>
+					At Tupperware Brands, we are committed to changing lives. With the chain of Confidence Program Tupperware
+					Brands has made an unwavering commitment to enlighten, educate and empower women and their families
+					across the globe, creating invaluable connections that last a lifetime. our sustainability programs are aimed
+					at promoting environmental protection and preservation. To learn more about the program,
+					<a href = "#">click here</a>
+				</p>
+				</figcaption>
+			</figure>
+	</li>
+</ul>
+</br> </br>
+<div id="wrapper">
+	<div id="footer">
+		<div id="footer-wrapper" >
+        <div class="footer">
+            <nav>
+            <a href="#" class="legalinfo">Legal Info</a>
+            <a href="#" class="faq">FAQ</a>
+            <a href="#" class="sitemap">Site Map</a>
+            <a href="#" class="branchinfo">Branch Info</a>
+            </nav>
+        </div>
+    </div>
+	</footer>
+</div>
+</body>
+</html>

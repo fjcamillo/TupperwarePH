@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static  'cart/css/cart.css'%}" />
+    <link rel="stylesheet" type="text/css" media="all" href={% static 'cart/css/styles.css' %}/>
+    <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+</head>
+<body>
+{% include 'header/header.html' %}
+<div id="w">
+    <!--header id="title">
+      <h1>Shopping Cart</h1>
+    </header-->
+    <div id="page">
+      <table id="cart">
+      </br>
+        <thead>
+          <tr>
+            <th class="first">Photo</th>
+            <th class="second">Product</th>
+            <th class="third">Price</th>
+            <th class="fourth">Quantity</th>
+            <th class="fifth">Sub-Total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+
+          <!-- shopping cart contents -->
+          {% for cartin in object_list %}
+          <tr class="productitm">
+            <!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+            <td><img src="{% static 'cart/img/design-bundle-pack.png' %}" class="thumb"></td>
+            <td>{{ cartin.product_cart_title }}</td>
+            <td>{{ cartin.product_cart_price }}</td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>{{ cartin.product_cart_price }}</td>
+            <td><span class="remove"><img src="{% static 'cart/img/trash.png' %}" alt="X"></span></td>
+          </tr>
+          {% endfor %}
+
+
+
+
+
+
+{#          <tr class="productitm">#}
+{#            <!-- http://www.amazon.com/Stuff-My-Cat-The-Book/dp/0811855384 -->#}
+{#            <td><img src="{% static 'cart/img/stuff-on-cat-book.png' %}" class="thumb"></td>#}
+{#            <td>Stuff on my Cat: The Book</td>#}
+{#            <td>$8.95</td>#}
+{#            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>#}
+{#            <td>$8.95</td>#}
+{#            <td><span class="remove"><img src="{% static 'cart/img/trash.png' %}" alt="X"></span></td>#}
+{#          </tr>#}
+{#          <tr class="productitm">#}
+{#            <!-- http://www.amazon.com/SpongeBob-SquarePants-The-First-Episodes/dp/B002DYJTVW -->#}
+{#            <td><img src="{% static 'cart/img/first-100-spongebob-dvd.png' %}" class="thumb"></td>#}
+{#            <td>SpongeBob's First 100 Episodes</td>#}
+{#            <td>$75.00</td>#}
+{#            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>#}
+{#            <td>$75.00</td>#}
+{#            <td><span class="remove"><img src="{% static 'cart/img/trash.png' %}" alt="X"></span></td>#}
+{#          </tr>#}
+{#          <tr class="productitm">#}
+{#            <!-- http://www.barnesandnoble.com/w/javascript-and-jquery-david-sawyer-mcfarland/1100405042 -->#}
+{#            <td><img src="{% static 'cart/img/javascript-jquery-missing-manual.png' %}" class="thumb"></td>#}
+{#            <td>JavaScript &amp; jQuery: The Missing Manual</td>#}
+{#            <td>$27.50</td>#}
+{#            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>#}
+{#            <td>$27.50</td>#}
+{#            <td><span class="remove"><img src="{% static 'cart/img/trash.png' %}" alt="X"></span></td>#}
+{#          </tr>#}
+
+        </tbody>
+      </table>
+</form>
+</br>
+</br>
+</br>
+  <div class="cart-collaterals">
+    <div class="h2"><h2>Cart Total</h2></div>
+</br>
+    <div class="cart_totals ">
+      <div class="c1"><h2>Tax</h2></div><hr>
+      <div class="c2"><h2>Total</h2></div><hr>
+        <p>{{ va }}</p>
+  </div>
+</br>
+        <div class="wc-proceed-to-checkout">
+        <a href="/home" id="submitbtn" class="checkout-button button alt wc-forward">
+        Proceed to Checkout</a>
+      </div>
+
+</form>
+
+
+    </div>
+  </div>
+
+
+  <div id="footer">
+    <div id="footer-wrapper" >
+        <div class="footer">
+            <nav>
+            <a href="#" class="legalinfo">Legal Info</a>
+            <a href="#" class="faq">FAQ</a>
+            <a href="#" class="sitemap">Site Map</a>
+            <a href="#" class="branchinfo">Branch Info</a>
+            </nav>
+        </div>
+    </div>
+  
+</div>
+</body>
+</html>

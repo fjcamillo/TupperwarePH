@@ -1,0 +1,33 @@
+body {
+	margin-top: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+  float: left;
+  border: 1px solid #333;
+  margin-right: 20%;
+  overflow: hidden;
+  width: 350px;
+}
+.item img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.item:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}

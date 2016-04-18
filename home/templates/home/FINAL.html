@@ -1,0 +1,263 @@
+<html>
+	<head>
+		<style>
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; height:92%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  top:0px;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+
+.products .imgWrap1 {
+    position: relative;
+    top:770px;
+    right:770px;
+    height:360px;
+    width: 610px;
+    padding:0px 0px 0px 0px;
+    border:0px;
+    margin: 0;
+}
+
+.products .imgDescription1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+  color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    margin: auto;
+    padding: 170px 20px;
+}
+
+.products .imgWrap1:hover .imgDescription1 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.products .imgWrap2 {
+    position: absolute;
+    top:770px;
+    right:100px;
+    height:360px;
+    width: 610px;
+}
+
+.products .imgDescription2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+  color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    margin: auto;
+    padding: 170px 20px;
+}
+
+.products .imgWrap2:hover .imgDescription2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.products .imgWrap3 {
+    position: absolute;
+    top:1200px;
+    right:770px;
+    height:360px;
+    width: 610px;
+}
+
+.products .imgDescription3 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+  color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    margin: auto;
+    padding: 170px 20px;
+}
+
+.products .imgWrap3:hover .imgDescription3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.products .imgWrap4 {
+    position: absolute;
+    top:1200px;
+    right:100px;
+    height:360px;
+    width: 610px;
+}
+
+.products .imgDescription4 {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+  color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    margin: auto;
+    padding: 170px 20px;
+}
+
+.products .imgWrap4:hover .imgDescription4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#footer-wrapper{
+    background-color: rgba(58, 43, 128, 0.9);
+    font-family: "Raleway", "Open Sans", serif;
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    top:1850px;
+    vertical-align: middle;
+    padding: 30px;
+    border:2px;
+}
+
+.legalinfo{position: absolute;left: 550px; top:15px;}
+.faq{position: absolute;left: 750px; top:15px;}
+.sitemap{position: absolute;left: 900px; top:15px;}
+.branchinfo{position: absolute;left: 350px; top:15px;}
+
+#footer-wrapper a {
+    margin: .7em;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#footer-wrapper a:hover {
+    color: #fe2b75;
+    border-bottom: none;
+}
+
+#footer-wrapper a:active{
+    text-decoration: none;
+    color: #fe2b75;;
+}
+
+#footer-wrapper .wrapper {
+    padding: .5em 0;
+}
+
+.footer {
+  overflow: auto; }
+
+#blog a.blog, #home a.home, #call a.call {
+  color: #fe2b75; }
+		</style>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'header/css/header.css' %}" />
+        <style>
+            body{
+        background: url("{% static 'home/HOME/9.jpg' %}" ) #ffffff repeat left top;
+        background-size:100%;
+      }
+        </style>
+  </head>
+	<body>
+{% include 'header/header.html' %}
+<div id="slider">
+<figure>
+<img src="{% static 'home/HOME/1.png' %}" alt="">
+<img src="{% static 'home/HOME/2.png' %}" alt="">
+<img src="{% static 'home/HOME/3.png' %}" alt="">
+<img src="{% static 'home/HOME/4.png' %}" alt="">
+<img src="{% static 'home/HOME/5.png' %}" alt="">
+</figure>
+</div>
+
+<div class="products">
+      <div class="imgWrap1">
+          <img src="{% static 'home/6.jpg' %}" height=360px width=610px alt="polaroid" />
+          <p class="imgDescription1">BUY NOW >></p>
+        </div>
+        <div class="imgWrap2">
+          <img src="{% static 'home/7.jpg' %}" height=360px width=610px alt="polaroid" />
+          <p class="imgDescription2">BUY NOW >></p>
+        </div>
+        <div class="imgWrap3">
+          <img src="{% static 'home/9.jpg' %}" height=360px width=610px alt="polaroid" />
+          <p class="imgDescription3">BUY NOW >></p>
+        </div>
+        <div class="imgWrap4">
+          <img src="{% static 'home/10.jpg' %}" height=360px width=610px alt="polaroid" />
+          <p class="imgDescription4">BUY NOW >></p>
+        </div>
+  </div>
+  <div style="position:absolute; top:700px; width: 100%; height: 20px; border-bottom: 3px solid black; text-align: center" class="hr2">
+     <span style="font-size:30px;background-color: #fdecf3;  padding-left:20px; padding-right:20px;  ">
+        BUNDLES
+      </span>
+  </div>
+
+    <div style="position:absolute; top:1650px; width: 100%; height: 20px; border-bottom: 3px solid black; text-align: center; " class="hr1">
+     <span style="font-size:30px;background-color: #fac2df; padding-left:20px; padding-right:20px; ">
+        FEATURED PRODUCTS
+      </span>
+  </div>
+
+  <div class="fb">
+      <img style="position:absolute; top:1700px; left:30px;" src="{% static 'home/HOME/1.jpg' %}" height=20% width=13%>
+      <img style="position:absolute; top:1700px; left:250px;" src="{% static 'home/HOME/2.jpg' %}" height=20% width=13%>
+      <img style="position:absolute; top:1700px; left:480px;" src="{% static 'home/HOME/3.jpg' %}" height=20% width=13%>
+      <img style="position:absolute; top:1700px; left:700px;" src="{% static 'home/HOME/4.jpg' %}" height=20% width=13%>
+      <img style="position:absolute; top:1700px; left:920px;" src="{% static 'home/HOME/6.jpg' %}" height=20% width=13%>
+      <img style="position:absolute; top:1700px; left:1150px;" src="{% static 'home/HOME/7.jpg' %}" height=20% width=13%>
+  </div>
+
+ <div id="footer-wrapper" >
+    <div class="footer">
+        <nav>
+        <a href="#" class="legalinfo">Legal Info</a>
+        <a href="#" class="faq">FAQ</a>
+        <a href="#" class="sitemap">Site Map</a>
+        <a href="#" class="branchinfo">Branch Info</a>
+        </nav>
+    </div>
+  </div>
+
+	</body>
+</html>
